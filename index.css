@@ -1,0 +1,255 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    background-color: #E5E5E5;
+}
+
+body {
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-around;
+}
+
+#contenedor-logo {
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#logo-alura {
+    cursor: pointer;
+}
+
+#contenedor-encriptar {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textarea-encriptar {
+    margin-top: 8%;
+    width: 95%;
+    height: 400px;
+    resize: none;
+    font-size: 28px;
+    color: #0A3871;
+    border: none;
+    outline: none;
+}
+
+#textarea-encriptar::placeholder {
+    color: #0A3871;
+}
+
+.advertencia {
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    padding-left: 40px;
+}
+
+.zondicons--exclamation-solid {
+    width: 10px;
+    height: 10px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    color: #495057;
+}
+
+#alerta {
+    background-color: #E5E5E5;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    color: #495057;
+    font-size: 10px;
+}
+
+.funcionalidades {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-funcionalidades {
+    width: 40%;
+    height: 67px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: darkblue;
+}
+
+#btn-encriptar {
+    width: 328px;
+    height: 67px;
+    background: darkblue;
+    color: #FFFFFF;
+    border: none;
+}
+
+#btn-desencriptar {
+    width: 328px;
+    height: 67px;
+    background-color: lightblue;
+    color: darkblue;
+    border: 1px none;
+}
+
+#contenedor-resultado {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10sspx lightgray;
+}
+
+#muneco-resultado {
+    background-color: white;
+    width: 70%;
+}
+
+.txt-encriptado {
+    display: flex;
+    text-align: center;
+    resize: none;
+    overflow-y: auto;
+    width: 90%;
+    font-size: 17px;
+    font-weight: bold;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 30px;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+p {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-copiar {
+    width: 70%;
+    height: 67px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#copiar {
+    display: none;
+}
+
+.pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+
+#pie-pagina {
+    width: 3%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*Formato para los dispositivos moviles (TABLETS)*/
+@media screen and (max-width: 768px) {
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contenedor-logo {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    #contenedor-encriptar {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    #contenedor-resultado {
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #muneco-resultado {
+        display: none;
+    }
+}
+
+/*Formato para los dispositivos moviles (SMARTPHONES)*/
+@media screen and (max-width: 375px) {
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contenedor-logo {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    #contenedor-encriptar {
+        display: flex;
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .funcionalidades {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn-funcionalidades {
+        margin: 10px;
+        width: 100%;
+    }
+
+    #contenedor-resultado {
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #muneco-resultado {
+        display: none;
+    }
+}
